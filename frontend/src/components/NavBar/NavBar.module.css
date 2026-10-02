@@ -1,0 +1,76 @@
+.navBar {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  flex: 0 0 60px;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 clamp(20px, 4vw, 56px);
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--color-text);
+}
+
+.navLeft {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.navLeft a {
+  position: relative;
+}
+
+.navLeft a::after {
+  position: absolute;
+  right: -8px;
+  bottom: 2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  content: "";
+}
+
+.navLeft a:hover,
+.navRight a:hover {
+  color: var(--color-accent);
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #5e5966;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.navRight button {
+  min-height: 34px;
+  padding: 6px 12px;
+  border-color: transparent;
+  background: transparent;
+  color: #5e5966;
+  box-shadow: none;
+}
+
+.navRight button:hover {
+  border-color: var(--color-border);
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    flex-basis: 56px;
+    height: 56px;
+    padding: 0 18px;
+  }
+
+  .navRight {
+    gap: 7px;
+    font-size: 12px;
+  }
+}

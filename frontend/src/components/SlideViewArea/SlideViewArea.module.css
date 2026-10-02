@@ -1,0 +1,120 @@
+.slideViewArea {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 1px solid #d7d2da;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.slideNumber {
+  position: absolute;
+  left: 12px;
+  bottom: 8px;
+  font-size: 12px;
+  color: #756f7c;
+  font-weight: 650;
+  z-index: 999;
+}
+
+.textBox,
+.imageBox,
+.codeBox,
+.videoBox {
+  position: absolute;
+}
+
+.textBox {
+  text-align: left;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.1;
+}
+
+.textBox:not(.previewTextBox):hover {
+  border-color: #a997cf;
+  background: rgba(241, 237, 251, 0.24);
+}
+
+.imageBox {
+  border: 1px solid #d8d3dc;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.videoBox {
+  padding: 22px;
+  border: none;
+  background: #f0eef2;
+  cursor: pointer;
+}
+
+.videoFrame {
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.codeBox {
+  color: #2b2732;
+  border: 1px solid #d4ced8;
+  overflow: auto;
+  background: #faf9fb;
+  text-align: left;
+  height: 100%;
+}
+
+.codeBox pre {
+  margin: 0;
+  white-space: pre;
+  padding: 10px;
+}
+
+.languageLabel {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  font-size: 10px;
+}
+
+/* preview non border */
+.previewTextBox,
+.previewImageBox,
+.previewVideoBox,
+.previewCodeBox {
+  border: none;
+}
+
+.previewVideoBox {
+  background: none;
+  padding: 0;
+}
+
+.previewLanguageLabel {
+  display: none;
+}
+
+.previewSlideViewArea {
+  border: none;
+}

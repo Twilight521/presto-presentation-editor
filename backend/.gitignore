@@ -1,0 +1,8 @@
+node_modules/
+.env
+database.json
+database.test.json
+dist/
+public/
+.DS_Store
+*.log

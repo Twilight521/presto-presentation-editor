@@ -1,0 +1,9 @@
+**/node_modules/
+**/database.json
+**/database.test.json
+**/.env
+**/.env.local
+**/dist/
+**/.vscode/
+**/.idea/
+.DS_Store

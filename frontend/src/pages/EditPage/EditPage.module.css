@@ -1,0 +1,355 @@
+.editorPage {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f3f1f4;
+}
+
+.editorHeader {
+  display: flex;
+  flex: 0 0 46px;
+  align-items: center;
+  height: 46px;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--color-border);
+  background: #ffffff;
+}
+
+.backAction {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 9px;
+  border-color: transparent;
+  background: transparent;
+  color: #514b58;
+  font-size: 13px;
+  box-shadow: none;
+}
+
+.backAction:hover:not(:disabled) {
+  border-color: var(--color-border);
+  background: var(--color-surface-subtle);
+  color: var(--color-accent);
+}
+
+.backAction span {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.mainLayout {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.toolbar {
+  width: 204px;
+  flex: 0 0 204px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  padding: 18px 14px 14px;
+  border-right: 1px solid var(--color-border);
+  background: #fbfafb;
+}
+
+.toolSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionLabel {
+  padding: 0 3px;
+  color: #8a838f;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.toolGrid,
+.utilityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.toolItem {
+  display: flex;
+  min-width: 0;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px 4px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #403b47;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.toolItem:hover {
+  border-color: #e0dae5;
+  background: #f2eef6;
+  color: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+.toolItem:active {
+  transform: translateY(0);
+}
+
+.toolIcon,
+.smallIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolIcon img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) saturate(100%);
+  opacity: 0.72;
+}
+
+.smallIcon img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%);
+  opacity: 0.68;
+}
+
+.toolItem:hover img {
+  opacity: 0.9;
+}
+
+.toolLabel {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.destructiveArea {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+}
+
+.deletePresentation {
+  display: flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: #9e4540;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 650;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.deletePresentation img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(20%) saturate(1845%) hue-rotate(316deg) brightness(91%) contrast(86%);
+  opacity: 0.9;
+}
+
+.deletePresentation:hover {
+  border-color: #efd4d1;
+  background: #fbefed;
+}
+
+.canvasArea {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  overflow: hidden;
+  background: #f0eef2;
+}
+
+.saveStatus {
+  position: absolute;
+  z-index: 10;
+  top: 12px;
+  right: 18px;
+  padding: 5px 9px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: var(--shadow-xs);
+}
+
+.editorHint {
+  position: absolute;
+  z-index: 10;
+  bottom: 12px;
+  left: 18px;
+  padding: 5px 9px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--color-muted);
+  font-size: 11px;
+  box-shadow: var(--shadow-xs);
+  pointer-events: none;
+}
+
+.saving { color: var(--color-muted); }
+.saved { color: #217a45; }
+.error { color: var(--color-danger); }
+
+.canvasCenter {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 32px 22px;
+}
+
+.canvasBox {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  container-type: size;
+}
+
+.slideWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.slideBox {
+  position: relative;
+  display: flex;
+  width: min(100cqw, calc((100cqh - 72px) * 16 / 9));
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(12px, 2cqw, 32px);
+  filter: drop-shadow(0 10px 24px rgba(35, 27, 42, 0.1));
+}
+
+.slideInner {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.pageNo {
+  color: #756f7c;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+@media (max-width: 768px) {
+  .editorHeader {
+    flex-basis: 42px;
+    height: 42px;
+    padding: 0 12px;
+  }
+
+  .mainLayout {
+    flex-direction: column;
+  }
+
+  .toolbar {
+    width: 100%;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 9px 10px;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .toolSection {
+    min-width: max-content;
+    gap: 5px;
+  }
+
+  .sectionLabel {
+    font-size: 9px;
+  }
+
+  .toolGrid,
+  .utilityGrid {
+    display: flex;
+    gap: 5px;
+  }
+
+  .toolItem {
+    width: 58px;
+    min-height: 48px;
+    padding: 5px 3px;
+  }
+
+  .toolIcon img { width: 18px; height: 18px; }
+  .smallIcon img { width: 16px; height: 16px; }
+
+  .destructiveArea {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 0;
+    padding: 17px 0 0 10px;
+    border-top: none;
+    border-left: 1px solid var(--color-border);
+  }
+
+  .deletePresentation {
+    width: 58px;
+    min-height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    padding: 4px 2px;
+    text-align: center;
+  }
+
+  .canvasArea {
+    flex: 1;
+  }
+
+  .canvasCenter {
+    padding: 18px 14px 14px;
+  }
+
+  .editorHint {
+    bottom: 8px;
+    left: 10px;
+    font-size: 10px;
+  }
+}

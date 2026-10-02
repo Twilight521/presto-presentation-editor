@@ -1,0 +1,119 @@
+:root {
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #24212d;
+  background: #f7f6f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+  --color-bg: #f7f6f4;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #faf9f7;
+  --color-text: #24212d;
+  --color-muted: #706b79;
+  --color-border: #e5e1e8;
+  --color-border-strong: #d3ced8;
+  --color-accent: #7357c7;
+  --color-accent-hover: #6045af;
+  --color-accent-soft: #f1edfb;
+  --color-secondary: #e8795f;
+  --color-danger: #b8433e;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-xs: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-sm: 0 6px 18px rgba(37, 28, 48, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  min-height: 38px;
+  padding: 8px 15px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: var(--shadow-xs);
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+  border-color: #aaa2b2;
+  background: var(--color-surface-subtle);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(115, 87, 199, 0.2);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #aaa2b2;
+}
+
+::placeholder {
+  color: #98a2b3;
+}
+
+::selection {
+  background: #e7dff8;
+}
