@@ -2,14 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "express",
   "functions": {
-    "api/index.js": {
+    "index.js": {
       "includeFiles": "node_modules/swagger-ui-dist/**"
     }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/index.js"
-    }
-  ]
+  }
 }
