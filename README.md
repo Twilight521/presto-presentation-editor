@@ -4,6 +4,8 @@ Presto is a lightweight presentation editor built with React and TypeScript.
 Users can create presentations, add slide content, customise themes, and open a
 full-screen preview.
 
+**Live demo:** [presto-presentation-editor.vercel.app](https://presto-presentation-editor.vercel.app/)
+
 ## Demo account
 
 - Email: `demo@presto.app`
